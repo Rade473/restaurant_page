@@ -1,4 +1,6 @@
-export default function createDiv() {
+export default function createDiv(div_class) {
   console.log("div");
-  return document.createElement("div");
+  let div = document.createElement("div");
+  div.classList.add(div_class);
+  return div;
 }
