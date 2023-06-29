@@ -1,4 +1,8 @@
-import createDiv from "./helperFunctions.js";
+import { createDiv, clearMainDiv } from "./helperFunctions.js";
+import { populateHomePage } from "./home";
+import { populateMenuPage } from "./menu.js";
+import { populateContactPage } from "./contact.js";
+
 // const body = document.getElementsByName("body");
 //Create the header
 function createHeader() {
@@ -11,7 +15,7 @@ function createHeader() {
   home_tab.id = "home_tab_link";
   home_tab.addEventListener("click", (e) => {
     // populate with home info
-    console.log(e);
+    changeTab(e.target);
   });
 
   const menu_tab = createDiv("tab_icon");
@@ -20,7 +24,8 @@ function createHeader() {
   menu_tab.id = "menu_tab_link";
   menu_tab.addEventListener("click", (e) => {
     // populate with home info
-    console.log(e);
+
+    changeTab(e.target);
   });
 
   const contact_tab = createDiv("tab_icon");
@@ -28,14 +33,41 @@ function createHeader() {
   contact_tab.textContent = "Contact";
   contact_tab.id = "contact_tab_link";
   contact_tab.addEventListener("click", (e) => {
-    // populate with home info
-    console.log(e);
+    // populate with  info
+    changeTab(e.target);
   });
 
   return header;
 }
 
+function createMainDiv() {
+  const mainDiv = createDiv("main");
+  mainDiv.id = "main";
+  return mainDiv;
+}
+
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.textContent = "This is a footer";
+  return footer;
+}
+
+function changeTab(tab) {
+  if (tab.id == "home_tab_link") {
+    clearMainDiv();
+    populateHomePage();
+  } else if (tab.id == "menu_tab_link") {
+    clearMainDiv();
+    populateMenuPage();
+  } else if (tab.id == "contact_tab_link") {
+    clearMainDiv();
+    populateContactPage();
+  }
+  // Write tab switching logic here
+}
+
 document.body.appendChild(createHeader());
+document.body.appendChild(createMainDiv());
+populateHomePage();
+document.body.appendChild(createFooter());
 //Create tabs here
-createDiv();
-// Write tab switching logic here
