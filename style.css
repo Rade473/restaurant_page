@@ -1,3 +1,39 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  justify-content: space-between;
+}
+
+header {
+  height: 75px;
+  background-color: red;
+}
+
+footer {
+  height: 50px;
+  background-color: black;
+}
+
+div#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: green;
+  flex-wrap: nowrap;
+}
+
+div.info {
+  max-width: 300px;
+  background-color: pink;
+  margin: 20px;
 }
