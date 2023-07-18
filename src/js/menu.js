@@ -13,13 +13,20 @@ export async function populateMenuPage() {
     const menu = await fetchContent();
 
     for (let menuCategory in menu) {
+      const categoryContainer = createDiv("menu-item-container");
+      const categoryName = document.createElement("h2");
+      categoryName.textContent = menu[menuCategory].name;
+      categoryContainer.appendChild(categoryName);
+
       for (let menuItem in menu[menuCategory]) {
-        main.appendChild(createMenuItem(menu[menuCategory][menuItem]));
+        if (menuItem !== "name") {
+          categoryContainer.appendChild(
+            createMenuItem(menu[menuCategory][menuItem])
+          );
+        }
       }
+      main.appendChild(categoryContainer);
     }
-    // const mainDishes = menu.mainDishes;
-    // const cocktails = menu.cocktails;
-    // const sides = menu.sides;
   } catch (error) {
     console.log("Error fetching content:", error);
   }

@@ -4,6 +4,7 @@
   "address": "<h4>Address</h4><p>Vesuvio Ristorante<br>123 Main Street<br>Newark, New Jersey, 07101",
   "menu":  {
     "mainDishes": {
+      "name": "Main Dishes",
       "spaghettiBolognese": {
         "name": "Spaghetti Bolognese",
         "description": "Classic Italian pasta dish with rich meat sauce",
@@ -31,6 +32,7 @@
       }
     },
     "cocktails": {
+      "name": "Cocktails",
       "aperolSpritz": {
         "name": "Aperol Spritz",
         "description": "Refreshing cocktail made with Aperol, Prosecco, and a splash of soda water",
@@ -48,6 +50,7 @@
       }
     },
     "sides": {
+      "name": "Sides",
       "garlicBread": {
         "name": "Garlic Bread",
         "description": "Toasted bread topped with garlic-infused butter and sprinkled with herbs",
