@@ -32,6 +32,10 @@ div#main {
   flex-wrap: nowrap;
 }
 
+img {
+  height: 200px;
+  width: 200px;
+}
 div.info {
   max-width: 300px;
   background-color: pink;

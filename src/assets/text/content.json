@@ -1,0 +1,66 @@
+{ 
+  "quote":  "Welcome to Vesuvio, where family, food, and loyalty, intertwine to create an unforgettable dining experience",
+  "workingHours":  "<h4>Working Hours</h4><p>Monday - Thursday: 12:00 PM - 10:00 PM<br>Friday - Sunday: 12:00 PM - 10:00 PM </p>",
+  "address": "<h4>Address</h4><p>Vesuvio Ristorante<br>123 Main Street<br>Newark, New Jersey, 07101",
+  "menu":  {
+    "mainDishes": {
+      "spaghettiBolognese": {
+        "name": "Spaghetti Bolognese",
+        "description": "Classic Italian pasta dish with rich meat sauce",
+        "picture": "./assets/images/mainDishes/spaghetti-bolognese.jpg"
+      },
+      "margheritaPizza": {
+        "name": "Margherita Pizza",
+        "description": "Traditional thin-crust pizza topped with tomato sauce, mozzarella cheese, and fresh basil",
+        "picture": "./assets/images/mainDishes/margherita-pizza.jpg"
+      },
+      "chickenParmesan": {
+        "name": "Chicken Parmesan",
+        "description": "Breaded chicken cutlet topped with marinara sauce and melted cheese, served with pasta",
+        "picture": "./assets/images/mainDishes/chicken-parmesan.jpg"
+      },
+      "grilledSalmon": {
+        "name": "Grilled Salmon",
+        "description": "Tender grilled salmon fillet served with a lemon butter sauce and seasonal vegetables",
+        "picture": "./assets/images/mainDishes/grilled-salmon.jpg"
+      },
+      "eggplantParmigiana": {
+        "name": "Eggplant Parmigiana",
+        "description": "Layers of breaded and fried eggplant with marinara sauce, cheese, and herbs",
+        "picture": "./assets/images/mainDishes/eggplant-parmigiana.jpg"
+      }
+    },
+    "cocktails": {
+      "aperolSpritz": {
+        "name": "Aperol Spritz",
+        "description": "Refreshing cocktail made with Aperol, Prosecco, and a splash of soda water",
+        "picture": "./assets/images/cocktails/aperol-spritz.jpg"
+      },
+      "espressoMartini": {
+        "name": "Espresso Martini",
+        "description": "Vodka-based cocktail infused with coffee liqueur and a shot of espresso",
+        "picture": "./assets/images/cocktails/espresso-martini.jpg"
+      },
+      "negroni": {
+        "name": "Negroni",
+        "description": "Classic cocktail featuring equal parts of gin, sweet vermouth, and Campari",
+        "picture": "./assets/images/cocktails/negroni.jpg"
+      }
+    },
+    "sides": {
+      "garlicBread": {
+        "name": "Garlic Bread",
+        "description": "Toasted bread topped with garlic-infused butter and sprinkled with herbs",
+        "picture": "./assets/images/sides/garlic-bread.jpg"
+      },
+      "capreseSalad": {
+        "name": "Caprese Salad",
+        "description": "Fresh salad made with ripe tomatoes, mozzarella cheese, basil, and a drizzle of balsamic glaze",
+        "picture": "./assets/images/sides/caprese-salad.jpg"
+      }
+    }
+  }
+  }
+  
+
+

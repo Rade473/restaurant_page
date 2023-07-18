@@ -5,10 +5,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
-    home: "./src/home.js",
-    menu: "./src/menu.js",
-    contact: "./src/contact.js",
+    index: "./src/js/index.js",
+    home: "./src/js/home.js",
+    menu: "./src/js/menu.js",
+    contact: "./src/js/contact.js",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -21,6 +21,10 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
