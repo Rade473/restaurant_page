@@ -62,6 +62,29 @@
         "picture": "./assets/images/sides/caprese-salad.jpg"
       }
     }
+  },
+  "contacts": {
+    "manager": {
+      "name": "Anthony Soprano",
+      "role": "Manager",
+      "description": "The boss of Vesuvio, managing both the restaurant and the family.",
+      "picture": "./assets/images/contacts/antony-soprano.jpg",
+      "phone": "555-111-1111"
+    },
+    "chef": {
+      "name": "Artie Bucco",
+      "role": "Chef",
+      "description": "The talented chef of Vesuvio, serving authentic Italian dishes.",
+      "picture": "./assets/images/contacts/artie-bucco.jpg",
+      "phone": "555-222-2222"
+    },
+    "waiter": {
+      "name": "Christopher Moltisanti",
+      "role": "Waiter",
+      "description": "The dedicated waiter at Vesuvio, providing excellent service to guests.",
+      "picture": "./assets/images/contacts/christopher-moltisanti.jpg",
+      "phone": "555-333-3333"
+    }
   }
   }
   

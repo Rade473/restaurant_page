@@ -10,6 +10,9 @@ export async function populateHomePage() {
   try {
     const content = await fetchContent();
     const main = document.getElementById("main");
+    const pageHeader = createDiv("page-header");
+    pageHeader.textContent = "Home";
+    main.appendChild(pageHeader);
     const quote = createDiv("info");
     quote.textContent = content.quote;
     main.appendChild(quote);

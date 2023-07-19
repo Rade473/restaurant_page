@@ -11,6 +11,9 @@ export async function populateMenuPage() {
   try {
     const main = document.getElementById("main");
     const menu = await fetchContent();
+    const pageHeader = createDiv("page-header");
+    pageHeader.textContent = "Menu";
+    main.appendChild(pageHeader);
 
     for (let menuCategory in menu) {
       const categoryContainer = createDiv("menu-item-container");

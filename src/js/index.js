@@ -7,7 +7,6 @@ import { populateContactPage } from "./contact.js";
 //Create the header
 function createHeader() {
   const header = document.createElement("header");
-  header.textContent = "This is a header";
 
   const home_tab = createDiv("tab_icon");
   header.appendChild(home_tab);
