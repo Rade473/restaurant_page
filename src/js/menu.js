@@ -19,7 +19,7 @@ export async function populateMenuPage() {
       const categoryContainer = createDiv("menu-item-container");
       const categoryName = document.createElement("h2");
       categoryName.textContent = menu[menuCategory].name;
-      categoryContainer.appendChild(categoryName);
+      main.appendChild(categoryName);
 
       for (let menuItem in menu[menuCategory]) {
         if (menuItem !== "name") {

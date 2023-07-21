@@ -10,20 +10,22 @@ export async function populateHomePage() {
   try {
     const content = await fetchContent();
     const main = document.getElementById("main");
-    const pageHeader = createDiv("page-header");
-    pageHeader.textContent = "Home";
-    main.appendChild(pageHeader);
-    const quote = createDiv("info");
+
+    const quoteContainer = createDiv("welcome-quote");
+    const quote = document.createElement("p");
     quote.textContent = content.quote;
-    main.appendChild(quote);
+    quoteContainer.appendChild(quote);
+    main.appendChild(quoteContainer);
 
-    const hours = createDiv("info");
+    const hoursContainer = createDiv("working-hours");
+    const hours = document.createElement("p");
     hours.innerHTML = content.workingHours;
-    main.appendChild(hours);
+    hoursContainer.appendChild(hours);
+    main.appendChild(hoursContainer);
 
-    const address = createDiv("info");
-    address.innerHTML = content.address;
-    main.appendChild(address);
+    const footer = document.querySelector("footer");
+
+    footer.innerHTML = content.address;
   } catch (error) {
     console.log("Error fetching content:", error);
   }

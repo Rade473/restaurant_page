@@ -1,7 +1,7 @@
 { 
   "quote":  "Welcome to Vesuvio, where family, food, and loyalty, intertwine to create an unforgettable dining experience",
   "workingHours":  "<h4>Working Hours</h4><p>Monday - Thursday: 12:00 PM - 10:00 PM<br>Friday - Sunday: 12:00 PM - 10:00 PM </p>",
-  "address": "<h4>Address</h4><p>Vesuvio Ristorante<br>123 Main Street<br>Newark, New Jersey, 07101",
+  "address": "<address>Vesuvio Ristorante<br>123 Main Street<br>Newark, New Jersey, 07101</address>",
   "menu":  {
     "mainDishes": {
       "name": "Main Dishes",
@@ -20,11 +20,7 @@
         "description": "Breaded chicken cutlet topped with marinara sauce and melted cheese, served with pasta",
         "picture": "./assets/images/mainDishes/chicken-parmesan.jpg"
       },
-      "grilledSalmon": {
-        "name": "Grilled Salmon",
-        "description": "Tender grilled salmon fillet served with a lemon butter sauce and seasonal vegetables",
-        "picture": "./assets/images/mainDishes/grilled-salmon.jpg"
-      },
+    
       "eggplantParmigiana": {
         "name": "Eggplant Parmigiana",
         "description": "Layers of breaded and fried eggplant with marinara sauce, cheese, and herbs",

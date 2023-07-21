@@ -47,7 +47,6 @@ function createMainDiv() {
 
 function createFooter() {
   const footer = document.createElement("footer");
-  footer.textContent = "This is a footer";
   return footer;
 }
 
