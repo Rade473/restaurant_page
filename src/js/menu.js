@@ -1,12 +1,14 @@
 import { createDiv } from "./helperFunctions.js";
 import data from "../assets/text/content.json";
-function importAll(r) {
-  r.keys().forEach(r);
-}
 
-importAll(
-  require.context("../assets/images/", true, /\.(png|svg|jpg|jpeg|gif)$/i)
+const req = require.context(
+  "../assets/images/",
+  true,
+  /\.(png|svg|jpg|jpeg|gif)$/i
 );
+
+console.log(req("./cocktails/aperol-spritz.jpg"));
+
 export function populateMenuPage() {
   const main = document.getElementById("main");
   const menuContainer = createDiv("menu-container");
@@ -34,7 +36,8 @@ function createMenuItem(item) {
   const menuItemDiv = createDiv("menu-item");
 
   const imageElement = document.createElement("img");
-  imageElement.src = item.picture;
+  console.log(item.picture);
+  imageElement.src = req(item.picture);
   imageElement.alt = item.name;
 
   const itemName = document.createElement("h3");

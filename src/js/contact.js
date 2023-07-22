@@ -1,6 +1,12 @@
 import { createDiv } from "./helperFunctions.js";
 import data from "../assets/text/content.json";
 
+const req = require.context(
+  "../assets/images/",
+  true,
+  /\.(png|svg|jpg|jpeg|gif)$/i
+);
+
 export function populateContactPage() {
   const main = document.getElementById("main");
   const contactsContainer = createDiv("contacts-container");
@@ -16,7 +22,7 @@ function createContactDiv(contact) {
   const contactDiv = createDiv("contact");
 
   const imageElement = document.createElement("img");
-  imageElement.src = contact.picture;
+  imageElement.src = req(contact.picture);
   imageElement.alt = contact.name;
 
   const contactName = document.createElement("h3");
