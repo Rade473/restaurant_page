@@ -10,12 +10,12 @@ async function fetchContent() {
 export async function populateContactPage() {
   try {
     const main = document.getElementById("main");
+    const contactsContainer = createDiv("contacts-container");
+    main.appendChild(contactsContainer);
     const contacts = await fetchContent();
-    const pageHeader = createDiv("page-header");
-    pageHeader.textContent = "Contacts";
-    main.appendChild(pageHeader);
+
     for (let contact in contacts) {
-      main.appendChild(createContactDiv(contacts[contact]));
+      contactsContainer.appendChild(createContactDiv(contacts[contact]));
     }
   } catch (error) {
     console.log("Error fetching content:", error);
