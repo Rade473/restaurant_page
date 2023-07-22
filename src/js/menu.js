@@ -10,16 +10,15 @@ async function fetchContent() {
 export async function populateMenuPage() {
   try {
     const main = document.getElementById("main");
+    const menuContainer = createDiv("menu-container");
     const menu = await fetchContent();
-    const pageHeader = createDiv("page-header");
-    pageHeader.textContent = "Menu";
-    main.appendChild(pageHeader);
+    main.appendChild(menuContainer);
 
     for (let menuCategory in menu) {
       const categoryContainer = createDiv("menu-item-container");
       const categoryName = document.createElement("h2");
       categoryName.textContent = menu[menuCategory].name;
-      main.appendChild(categoryName);
+      menuContainer.appendChild(categoryName);
 
       for (let menuItem in menu[menuCategory]) {
         if (menuItem !== "name") {
@@ -28,7 +27,7 @@ export async function populateMenuPage() {
           );
         }
       }
-      main.appendChild(categoryContainer);
+      menuContainer.appendChild(categoryContainer);
     }
   } catch (error) {
     console.log("Error fetching content:", error);

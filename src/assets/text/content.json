@@ -5,11 +5,7 @@
   "menu":  {
     "mainDishes": {
       "name": "Main Dishes",
-      "spaghettiBolognese": {
-        "name": "Spaghetti Bolognese",
-        "description": "Classic Italian pasta dish with rich meat sauce",
-        "picture": "./assets/images/mainDishes/spaghetti-bolognese.jpg"
-      },
+   
       "margheritaPizza": {
         "name": "Margherita Pizza",
         "description": "Traditional thin-crust pizza topped with tomato sauce, mozzarella cheese, and fresh basil",
