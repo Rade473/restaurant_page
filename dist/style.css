@@ -6,7 +6,8 @@ html{
 body {
   height: 100%;
   width: 100%;
-  background-color: yellow;
+  background-color: black;
+  /* background-color: black; */
   display: flex;
   flex-direction: column;
   margin: 0px;
@@ -14,12 +15,33 @@ body {
 }
 
 header {
-  height: 75px;
-  background-color: red;
+  height: 10vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+header > div {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 3vh;
+  width: 33%;
+
 }
 
 footer {
-  height: 50px;
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 15px;
+  font-size: 2vh;
+}
+
+div.address{
   background-color: black;
 }
 
@@ -28,12 +50,114 @@ div#main {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: green;
   flex-wrap: nowrap;
+  width: 100%;
+  
 }
 
-div.info {
-  max-width: 300px;
-  background-color: pink;
-  margin: 20px;
+img {
+  height: 75%;
+  width: 100%;
 }
+
+
+div.menu-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.menu-item{
+  max-width: 30vw;
+  max-height: 80vh;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 2vh;
+}
+
+div.menu-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.menu-container > h2 {
+  padding-left: 20px;
+  color: white;
+  position: relative;
+  font-size: 4vh;
+
+}
+
+div.contacts-container{
+    display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  
+}
+div.contact{
+  max-width: 25vw;
+  min-width: 250px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 2vh; 
+
+}
+
+div.welcome-quote {
+  height: 90vh;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/images/jose-tebar-NmyO_WHuMh0-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.welcome-quote > p {
+  font-size: 5vh;
+  margin:200px;
+  text-align: center;
+}
+div.contact > img {
+  width: 100%;
+  height: 45%;
+}
+
+div.working-hours {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+div.working-hours > p {
+  text-align: center;
+  font-size: 3vh;
+}
+
+
+div#home_tab_link {
+  background-color: gray;
+}
+
+div.tab_icon:hover{
+  cursor: pointer;
+}
+
+
