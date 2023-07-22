@@ -5,6 +5,5 @@ export function createDiv(div_class) {
 }
 
 export function clearMainDiv() {
-  console.log("clear");
   document.getElementById("main").innerHTML = "";
 }

@@ -1,24 +1,14 @@
 import { createDiv } from "./helperFunctions.js";
+import data from "../assets/text/content.json";
 
-async function fetchContent() {
-  const response = await fetch("../assets/text/content.json");
-  const data = await response.json();
+export function populateContactPage() {
+  const main = document.getElementById("main");
+  const contactsContainer = createDiv("contacts-container");
+  main.appendChild(contactsContainer);
   const contacts = data.contacts;
-  return contacts;
-}
 
-export async function populateContactPage() {
-  try {
-    const main = document.getElementById("main");
-    const contactsContainer = createDiv("contacts-container");
-    main.appendChild(contactsContainer);
-    const contacts = await fetchContent();
-
-    for (let contact in contacts) {
-      contactsContainer.appendChild(createContactDiv(contacts[contact]));
-    }
-  } catch (error) {
-    console.log("Error fetching content:", error);
+  for (let contact in contacts) {
+    contactsContainer.appendChild(createContactDiv(contacts[contact]));
   }
 }
 

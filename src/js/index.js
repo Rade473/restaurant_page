@@ -2,6 +2,7 @@ import { createDiv, clearMainDiv } from "./helperFunctions.js";
 import { populateHomePage } from "./home.js";
 import { populateMenuPage } from "./menu.js";
 import { populateContactPage } from "./contact.js";
+import "../style.css";
 
 // const body = document.getElementsByName("body");
 //Create the header
@@ -76,6 +77,7 @@ function changeTab(tab) {
 
 document.body.appendChild(createHeader());
 document.body.appendChild(createMainDiv());
-populateHomePage();
 document.body.appendChild(createFooter());
+populateHomePage();
+
 //Create tabs here

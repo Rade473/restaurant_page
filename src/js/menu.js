@@ -1,36 +1,32 @@
 import { createDiv } from "./helperFunctions.js";
-
-async function fetchContent() {
-  const response = await fetch("../assets/text/content.json");
-  const data = await response.json();
-  const menu = data.menu;
-  return menu;
+import data from "../assets/text/content.json";
+function importAll(r) {
+  r.keys().forEach(r);
 }
 
-export async function populateMenuPage() {
-  try {
-    const main = document.getElementById("main");
-    const menuContainer = createDiv("menu-container");
-    const menu = await fetchContent();
-    main.appendChild(menuContainer);
+importAll(
+  require.context("../assets/images/", true, /\.(png|svg|jpg|jpeg|gif)$/i)
+);
+export function populateMenuPage() {
+  const main = document.getElementById("main");
+  const menuContainer = createDiv("menu-container");
+  const menu = data.menu;
+  main.appendChild(menuContainer);
 
-    for (let menuCategory in menu) {
-      const categoryContainer = createDiv("menu-item-container");
-      const categoryName = document.createElement("h2");
-      categoryName.textContent = menu[menuCategory].name;
-      menuContainer.appendChild(categoryName);
+  for (let menuCategory in menu) {
+    const categoryContainer = createDiv("menu-item-container");
+    const categoryName = document.createElement("h2");
+    categoryName.textContent = menu[menuCategory].name;
+    menuContainer.appendChild(categoryName);
 
-      for (let menuItem in menu[menuCategory]) {
-        if (menuItem !== "name") {
-          categoryContainer.appendChild(
-            createMenuItem(menu[menuCategory][menuItem])
-          );
-        }
+    for (let menuItem in menu[menuCategory]) {
+      if (menuItem !== "name") {
+        categoryContainer.appendChild(
+          createMenuItem(menu[menuCategory][menuItem])
+        );
       }
-      menuContainer.appendChild(categoryContainer);
     }
-  } catch (error) {
-    console.log("Error fetching content:", error);
+    menuContainer.appendChild(categoryContainer);
   }
 }
 
