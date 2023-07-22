@@ -6,7 +6,7 @@ html{
 body {
   height: 100%;
   width: 100%;
-  
+  background-color: black;
   /* background-color: black; */
   display: flex;
   flex-direction: column;
@@ -24,9 +24,11 @@ header {
 }
 
 header > div {
-  height: 75px;
-  line-height: 75px;
+  height: 10vh;
+  line-height: 10vh;
   text-align: center;
+  font-size: 3vh;
+  width: 33%;
 
 }
 
@@ -36,7 +38,7 @@ footer {
   width: 100%;
   color: white;
   padding: 15px;
-
+  font-size: 2vh;
 }
 
 div.address{
@@ -59,16 +61,6 @@ img {
 }
 
 
-div.page-header {
-  background-color: gray;
-  height: 75px;
-  width: 300px;
-  font-size: large;
-  text-align: center;
-  line-height: 75px;
-
-}
-
 div.menu-container {
   width: 100%;
   height: 100%;
@@ -82,22 +74,26 @@ div.menu-container {
 div.menu-item{
   max-width: 30vw;
   max-height: 80vh;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
   margin: 10px;
   padding: 10px;
   color: white;
+  font-size: 2vh;
 }
 
 div.menu-item-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 div.menu-container > h2 {
   padding-left: 20px;
   color: white;
   position: relative;
+  font-size: 4vh;
 
 }
 
@@ -106,15 +102,18 @@ div.contacts-container{
   flex-wrap: wrap;
   background-color: black;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   justify-content: center;
   
 }
 div.contact{
   max-width: 25vw;
+  min-width: 250px;
   margin: 10px;
   padding: 10px;
   color: white;
+  font-size: 2vh; 
+
 }
 
 div.welcome-quote {
@@ -131,12 +130,12 @@ div.welcome-quote {
 
 div.welcome-quote > p {
   font-size: 5vh;
-  padding: 200px;
+  margin:200px;
   text-align: center;
 }
 div.contact > img {
   width: 100%;
-  height: 40%;
+  height: 45%;
 }
 
 div.working-hours {
@@ -144,10 +143,21 @@ div.working-hours {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 
 div.working-hours > p {
   text-align: center;
   font-size: 3vh;
 }
+
+
+div#home_tab_link {
+  background-color: gray;
+}
+
+div.tab_icon:hover{
+  cursor: pointer;
+}
+
 

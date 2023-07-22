@@ -12,27 +12,34 @@ function createHeader() {
   header.appendChild(home_tab);
   home_tab.textContent = "Home";
   home_tab.id = "home_tab_link";
-  home_tab.addEventListener("click", (e) => {
-    // populate with home info
-    changeTab(e.target);
-  });
 
   const menu_tab = createDiv("tab_icon");
   header.appendChild(menu_tab);
   menu_tab.textContent = "Menu";
   menu_tab.id = "menu_tab_link";
-  menu_tab.addEventListener("click", (e) => {
-    // populate with home info
-
-    changeTab(e.target);
-  });
 
   const contact_tab = createDiv("tab_icon");
   header.appendChild(contact_tab);
   contact_tab.textContent = "Contact";
   contact_tab.id = "contact_tab_link";
   contact_tab.addEventListener("click", (e) => {
-    // populate with  info
+    // populate with  contact info
+    menu_tab.style.backgroundColor = "black";
+    home_tab.style.backgroundColor = "black";
+    changeTab(e.target);
+  });
+
+  menu_tab.addEventListener("click", (e) => {
+    // populate with menu info
+    home_tab.style.backgroundColor = "black";
+    contact_tab.style.backgroundColor = "black";
+    changeTab(e.target);
+  });
+
+  home_tab.addEventListener("click", (e) => {
+    // populate with home info
+    contact_tab.style.backgroundColor = "black";
+    menu_tab.style.backgroundColor = "black";
     changeTab(e.target);
   });
 
@@ -53,12 +60,15 @@ function createFooter() {
 function changeTab(tab) {
   if (tab.id == "home_tab_link") {
     clearMainDiv();
+    tab.style.backgroundColor = "gray";
     populateHomePage();
   } else if (tab.id == "menu_tab_link") {
     clearMainDiv();
+    tab.style.backgroundColor = "gray";
     populateMenuPage();
   } else if (tab.id == "contact_tab_link") {
     clearMainDiv();
+    tab.style.backgroundColor = "gray";
     populateContactPage();
   }
   // Write tab switching logic here
